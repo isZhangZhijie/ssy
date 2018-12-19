@@ -23,7 +23,7 @@ body, div, h1, h2, h3, h4, h5, h6, hr, p, a, blockquote, dl, dt, dd, ul, ol, li,
 }
 body {
   /*line-height: 1;*/
-  background: #f0f0f0;
+  background: #f5f5f5;
 }
 table {
   border-collapse: collapse;
