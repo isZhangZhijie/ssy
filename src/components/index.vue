@@ -1,6 +1,6 @@
 <template>
   <!-- swiper -->
-  <swiper :options="swiperOption">
+  <swiper :options="swiperOption" ref="mySwiper">
     <swiper-slide class="slide-first">
       <div class="inner-slide">
         <div class="figure-left">
@@ -9,7 +9,7 @@
         <div class="figure-center">
           <img src="@/assets/imgs/logo_all.png" alt="" class="text">
           <img src="@/assets/imgs/people1.png" alt="" class="figure1">
-          <a href="javascript:;" class="download-btn">
+          <a href="javascript:;" class="download-btn" @click="goDownload">
             <img src="@/assets/imgs/download_btn.png" alt="">
           </a>
         </div>
@@ -84,6 +84,7 @@
           <img src="@/assets/imgs/phone.png" alt="">
         </div>
       </div>
+      <canvas id="canvas"></canvas>
       <div class="footer">
         <router-link to="/" exact><img src="@/assets/imgs/logo.png" alt=""></router-link>
         <p>©2016 随时约 京ICP备 15011114号-1</p>
@@ -94,6 +95,7 @@
 </template>
 
 <script>
+
 // require styles
 import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
@@ -105,6 +107,7 @@ export default {
   },
   data () {
     return {
+      // 首页轮播图配置
       swiperOption: {
         direction: 'vertical',
         width: window.innerWidth,
@@ -112,17 +115,16 @@ export default {
         mousewheel: true,
         simulateTouch: false,
         keyboard: true,
+        slideActiveClass: 'index-slide-active',
         pagination: {
           el: '.swiper-pagination',
           clickable: true
         },
         on: {
           slideNextTransitionStart: function () {
-            console.log(this.activeIndex)
             $('.the-header').hide()
           },
           slidePrevTransitionStart: function () {
-            console.log(this.activeIndex)
             if (this.activeIndex === 0) $('.the-header').show()
           }
         }
@@ -132,6 +134,20 @@ export default {
   mounted: function () {
     // $('body, html, #app').css({'height': '100%', 'position': 'relative', 'overflow-y': 'hidden', 'min-width': '1200px'})
     $('body, html, #app').addClass('swiper-page')
+  },
+  computed: {
+    swiper () {
+      return this.$refs.mySwiper.swiper
+    }
+  },
+  methods: {
+    goDownload () {
+      this.swiper.slideTo(5, 800, false)
+      setTimeout(function () {
+        $('.slide-last').removeClass('index-slide-active').addClass('index-slide-active')
+      }, 800)
+      $('.the-header').hide()
+    }
   },
   beforeRouteEnter (to, from, next) {
     // console.log('beforeRouteEnter')
@@ -159,12 +175,10 @@ export default {
   right: 50px;
 }
 .swiper-slide {
-  /*top: -65px;*/
-  /*height: 100%;*/
   overflow: hidden;
 }
 .slide-first {
-  top: 65px;
+  padding-top: 65px;
 }
 .inner-slide {
   position: absolute;
@@ -211,6 +225,13 @@ export default {
   right: 0;
   margin: auto;
   height: 20%;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all .8s linear;
+}
+.index-slide-active.slide-first .text {
+  transform: translateY(0);
+  opacity: 1;
 }
 .slide-first .download-btn {
   position: absolute;
@@ -227,8 +248,13 @@ export default {
   position: absolute;
   bottom: 65px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 20px);
+  /*transform: translateY(20px);*/
   height: 60%;
+  transition: all .8s linear;
+}
+.index-slide-active.slide-first .figure1 {
+  transform: translate(-50%, 0);
 }
 .inner-slide .text {
   left: 0;
@@ -247,12 +273,21 @@ export default {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  height: 80%;
+  transform: translate(-50%, 30px);
+  height: 90%;
+  transition: all 1s linear;
+}
+.index-slide-active .inner-slide .figure img {
+  transform: translate(-50%, 0);
 }
 .slide-last .inner-slide .figure img {
   top: 50%;
   left: 50%;
+  height: 80%;
+  transform: translate(-47%, -50%);
+  transition: all 1s linear;
+}
+.index-slide-active.slide-last .inner-slide .figure img {
   transform: translate(-50%, -50%);
 }
 .slide-last .inner-slide {
@@ -262,11 +297,15 @@ export default {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-60%, -50%);
   width: 160px;
   text-align: center;
   font-size: 18px;
   color: #363636;
+  transition: all 1s linear;
+}
+.index-slide-active.slide-last .download-list {
+  transform: translate(-50%, -50%);
 }
 .slide-last .download-list li+li {
   margin-top: 54px;
