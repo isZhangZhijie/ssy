@@ -87,7 +87,7 @@
       <canvas id="canvas"></canvas>
       <div class="footer">
         <router-link to="/" exact><img src="@/assets/imgs/logo.png" alt=""></router-link>
-        <p>©2016 随时约 京ICP备 15011114号-1</p>
+        <p>©2015-2018 随时约 粤ICP备17153702号</p>
       </div>
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
@@ -170,8 +170,9 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 1;
+  background-color: #f5f5f5;
 }
-.swiper-pagination {
+.swiper-container .swiper-pagination {
   right: 50px;
 }
 .swiper-slide {
@@ -332,13 +333,13 @@ export default {
 </style>
 
 <style>
-.swiper-pagination-bullet {
+.swiper-container .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   outline: none;
 }
-.swiper-pagination-bullet-active {
+.swiper-container .swiper-pagination-bullet-active {
   background-color: #fb393f;
 }
 </style>

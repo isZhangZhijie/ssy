@@ -9,7 +9,7 @@
           </li>
         </ul>
       </div>
-      <ul class="member-box">
+      <ul class="member-box clearfix">
         <li class="member-list-item content" v-for="item in new Array(16)" :key="item">
           <div class="detail-box clearfix">
             <router-link to="/member" class="avatar"><img src="@/assets/imgs/56.png" alt=""></router-link>

@@ -76,6 +76,7 @@ export default {
 .nav {
   overflow: hidden;
   height: 64px;
+  color: #fff;
 }
 .logo {
   position: relative;
