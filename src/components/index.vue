@@ -2,6 +2,25 @@
   <!-- swiper -->
   <swiper :options="swiperOption" ref="mySwiper">
     <swiper-slide class="slide-first">
+      <div class="seo-content" style="position: absolute;top: -800px;">
+        <p>技能共享·闲时服务</p>
+        <p>随时随地 约你想要</p>
+        <p>下载随时约</p>
+        <p>随时来约时尚丽人</p>
+        <p>吃饭聊天、司仪主持、美容美妆、美发美甲、摄影模特、按摩SPA</p>
+        <p>俊男靓女，越玩越美丽</p>
+        <p>随时来越 生活服务</p>
+        <p>中医养生、汽车美容、家装设计、木工电工、管道疏通、跑腿代办、搬家……</p>
+        <p>生活好帮手，理尽大小事</p>
+        <p>随时来越 教育技术</p>
+        <p>会销讲师、家教辅导、书法绘画、口语培训、程序编写、平面设计、电脑维修……</p>
+        <p>学技术来约，找人兼职来约</p>
+        <p>随时来约 各种租赁</p>
+        <p>合租房、短租房、租车位、租工位、钟点房、租场地……</p>
+        <p>无忧找房、找车、找场地</p>
+        <p></p>
+        <p></p>
+      </div>
       <div class="inner-slide">
         <div class="figure-left">
           <img src="@/assets/imgs/pic_left.png" alt="">
@@ -62,19 +81,19 @@
       <div class="inner-slide">
         <div class="text">
           <ul class="download-list">
-            <li>
-              <img src="@/assets/imgs/android.png" alt="">
+            <!-- <li>
+              <img src="@/assets/imgs/download_android.png" alt="">
               推荐扫码下载
-            </li>
+            </li> -->
             <li>
               <a href="javascript:;">
-                <img src="@/assets/imgs/android.png" alt="">
+                <img src="@/assets/imgs/download_android.png" alt="">
                 Android版下载
               </a>
             </li>
             <li>
               <a href="javascript:;">
-                <img src="@/assets/imgs/ios.png" alt="">
+                <img src="@/assets/imgs/download_ios.png" alt="">
                 Iphone版下载
               </a>
             </li>

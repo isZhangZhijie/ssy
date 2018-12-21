@@ -6,20 +6,24 @@
           <h2><img src="@/assets/imgs/logo_fff.png" alt=""></h2>
           <p>中国最优秀的个人共享平台</p>
           <p>随时随地 约你想要</p>
+          <p>联络邮箱：yuedaoapp@vip.qq.com</p>
         </li>
         <li>
           <h2>关于随时约</h2>
-          <p><a href="">关于我们</a></p>
-          <p><a href="">联系我们</a></p>
+          <p><router-link to="/about">关于我们</router-link></p>
+          <p><router-link to="/about">联系我们</router-link></p>
         </li>
         <li>
-          <h2>新手引导</h2>
-          <p><a href="">关于我们</a></p>
-          <p><a href="">联系我们</a></p>
+          <h2>安全保障</h2>
+          <p><router-link to="/security">服务保障</router-link></p>
         </li>
         <li class="download-item">
-          <h2>下载APP</h2>
-          <p><img src="@/assets/imgs/android.png" alt=""></p>
+          <h2>Android下载</h2>
+          <p><img src="@/assets/imgs/download_android2.png" alt=""></p>
+        </li>
+        <li class="download-item">
+          <h2>IOS下载</h2>
+          <p><img src="@/assets/imgs/download_ios2.png" alt=""></p>
         </li>
       </ul>
       <p class="copyright">©2015-2018 随时约 粤ICP备17153702号</p>
@@ -47,7 +51,7 @@ export default {
 }
 .the-footer li {
   float: left;
-  width: calc(1200px / 4);
+  width: calc(1200px / 5);
 }
 .the-footer h2 {
   margin-bottom: 20px;

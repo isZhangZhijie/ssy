@@ -13,7 +13,7 @@ import four0four from '@/components/common/four0four'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
       path: '/',

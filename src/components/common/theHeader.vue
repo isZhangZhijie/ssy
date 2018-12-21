@@ -7,16 +7,16 @@
       </div>
       <ul class="route-list">
         <router-link tag="li" active-class="active" class="route-item" to="/" exact><a><span>首页</span></a></router-link>
-        <router-link tag="li" active-class="active" class="route-item" to="/hall"><a><span>服务大厅</span></a></router-link>
-        <router-link tag="li" active-class="active" class="route-item" to="/classify"><a><span>服务分类</span></a></router-link>
+        <!-- <router-link tag="li" active-class="active" class="route-item" to="/hall"><a><span>服务大厅</span></a></router-link> -->
+        <!-- <router-link tag="li" active-class="active" class="route-item" to="/classify"><a><span>服务分类</span></a></router-link> -->
         <router-link tag="li" active-class="active" class="route-item" to="/recruit"><a><span>达人招募</span></a></router-link>
         <router-link tag="li" active-class="active" class="route-item" to="/security"><a><span>服务保障</span></a></router-link>
         <router-link tag="li" active-class="active" class="route-item" to="/about"><a><span>关于我们</span></a></router-link>
       </ul>
-      <p class="login">登录/注册</p>
+      <!-- <p class="login">登录/注册</p>
       <p class="location">
         <router-link to="/city"><i class="icon-location"></i><span>广州市</span></router-link>
-      </p>
+      </p> -->
     </div>
   </div>
 </template>

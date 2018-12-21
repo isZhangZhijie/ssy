@@ -8,7 +8,7 @@
         <p>还是能下厨、搞清洁、写文章、搞开发，拥有一技之长，</p>
         <p>快来随时约发挥你的各种技能</p>
         <p style="margin-bottom: 56px;">用你的闲置时间来赚钱！</p>
-        <a href="javascript:;" class="apply-btn">我要申请</a>
+        <a href="javascript:;" @click="goDownload" class="apply-btn">我要申请</a>
         <ul class="merit">
           <li>
             <span><i></i>身份认证</span>
@@ -39,7 +39,7 @@
         <p>期待你的加入，成为随时约“技能达人”，不断丰富我们的服务</p>
       </div>
     </div>
-    <div class="recruit-banner3">
+    <!-- <div class="recruit-banner3">
       <div class="container">
         <h2>TA们都在随时约 - 发布技能<span>赚钱</span></h2>
         <ul class="member-list clearfix">
@@ -53,13 +53,13 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
     <div class="recruit-banner4">
       <div class="container">
         <span>你还在等什么</span>
         <p>想成为技能达人</p>
         <h2><span>扫描</span>随时约下载</h2>
-        <img src="@/assets/imgs/180.png" alt="">
+        <img src="@/assets/imgs/download_android2.png" alt="">
       </div>
     </div>
   </div>
@@ -70,6 +70,12 @@ export default {
   name: 'recruit',
   data () {
     return {}
+  },
+  methods: {
+    goDownload () {
+      // $(document).animate().scrollTop($(document).height() - $(window).height())
+      $('html, body').finish().animate({'scrollTop': $(document).height() - $(window).height()}, 400)
+    }
   }
 }
 </script>
@@ -140,7 +146,7 @@ export default {
 }
 .recruit-banner2 {
   height: 568px;
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 .recruit-banner2 .container {
   padding: 110px 20px 0 570px;
@@ -236,9 +242,14 @@ export default {
 .recruit-banner4 h2 {
   margin-bottom: 40px;
   font-size: 28px;
+  font-weight: bold;
   color: #000;
 }
 .recruit-banner4 h2 span {
   color: #fb393f;
+}
+.recruit-banner4 img {
+  width: 180px;
+  /*display: block;*/
 }
 </style>
