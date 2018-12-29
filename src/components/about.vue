@@ -75,6 +75,19 @@ export default {
     BmMarker, // 定位点
     BmInfoWindow // 定位弹框
   },
+  metaInfo: {
+    title: '关于我们',
+    meta: [
+      {
+        name: 'keywords',
+        content: '随时约，公司简介，产品介绍，产品特色，联系方式'
+      },
+      {
+        name: 'description',
+        content: '“随时约”服务平台。国内优秀个人服务交易平台，共享经济领导者'
+      }
+    ]
+  },
   data () {
     return {
       center: {lng: 0, lat: 0},

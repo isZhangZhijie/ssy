@@ -2,6 +2,7 @@
   <div class="the-header">
     <div class="nav container">
       <div class="logo">
+        <h1 title="随时约">随时约</h1>
         <router-link to="/"><img src="@/assets/imgs/logo.png" alt=""></router-link>
         <!-- <span>随时随地，约你想约</span> -->
       </div>
@@ -32,6 +33,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1 {
+  position: absolute;
+  text-indent: -9999em;
+}
 .login {
   position: relative;
   top: 15px;

@@ -68,13 +68,25 @@
 <script>
 export default {
   name: 'recruit',
+  metaInfo: {
+    title: '申请成为随时约 "技能达人"',
+    meta: [
+      {
+        name: 'keywords',
+        content: '随时约，申请，技能达人，赚钱，身份认证，平台担保，信誉加盟'
+      },
+      {
+        name: 'description',
+        content: '申请成为随时约 技能达人让你附近的用户排队找你 赚钱无论你只会陪聊天、陪逛街、陪健身、看电影等生活日常技能，还是能下厨、搞清洁、写文章、搞开发，拥有一技之长，快来随时约发挥你的各种技能用你的闲置时间来赚钱'
+      }
+    ]
+  },
   data () {
     return {
     }
   },
   methods: {
     goDownload () {
-      console.log(this.$root)
       this.$root.$children[0].$refs['vs'].scrollTo({
         x: 0,
         y: '100%'

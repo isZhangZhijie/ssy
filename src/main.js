@@ -7,6 +7,9 @@ import $ from 'jquery'
 import vuescroll from 'vuescroll'
 import 'vuescroll/dist/vuescroll.css'
 
+import MetaInfo from 'vue-meta-info'
+Vue.use(MetaInfo)
+
 Vue.use(vuescroll)
 
 $('html')
@@ -19,5 +22,8 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  render: h => h(App),
+  mounted () {
+    document.dispatchEvent(new Event('render-event'))
+  }
 })
