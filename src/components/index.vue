@@ -106,7 +106,7 @@
       <canvas id="canvas"></canvas>
       <div class="footer">
         <router-link to="/" exact><img src="@/assets/imgs/logo.png" alt=""></router-link>
-        <p>©2015-2018 随时约 粤ICP备17153702号</p>
+        <p>©2015-2018 随时约 <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备17153702号</a></p>
       </div>
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
@@ -129,8 +129,8 @@ export default {
       // 首页轮播图配置
       swiperOption: {
         direction: 'vertical',
-        width: window.innerWidth,
-        height: window.innerHeight,
+        // width: window.innerWidth,
+        // height: window.innerHeight,
         mousewheel: true,
         simulateTouch: false,
         keyboard: true,
@@ -152,7 +152,7 @@ export default {
   },
   mounted: function () {
     // $('body, html, #app').css({'height': '100%', 'position': 'relative', 'overflow-y': 'hidden', 'min-width': '1200px'})
-    $('body, html, #app').addClass('swiper-page')
+    // $('body, html, #app').addClass('swiper-page')
   },
   computed: {
     swiper () {
@@ -170,12 +170,12 @@ export default {
   },
   beforeRouteEnter (to, from, next) {
     // console.log('beforeRouteEnter')
-    $('body, html, #app').addClass('swiper-page')
+    // $('body, html, #app').addClass('swiper-page')
     next()
   },
   beforeRouteLeave (to, from, next) {
     // console.log('beforeRouteLeave')
-    $('body, html, #app').removeClass('swiper-page')
+    // $('body, html, #app').removeClass('swiper-page')
     next()
   }
 }
@@ -183,6 +183,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+img {
+  width: auto;
+  height: auto;
+}
 .swiper-container {
   position: absolute;
   top: 0;

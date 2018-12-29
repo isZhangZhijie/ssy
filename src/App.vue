@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <the-header></the-header>
-    <router-view/>
-    <the-footer></the-footer>
+    <vue-scroll :ops="ops" ref="vs">
+      <the-header></the-header>
+      <keep-alive><router-view/></keep-alive>
+      <the-footer></the-footer>
+    </vue-scroll>
   </div>
 </template>
 
@@ -14,6 +16,27 @@ export default {
   components: {
     theHeader,
     theFooter
+  },
+  data () {
+    return {
+      ops: {
+        vuescroll: {},
+        scrollPanel: {},
+        rail: {
+          size: '10px',
+          background: 'transparent'
+        },
+        bar: {
+          background: '#f8b62b',
+          hoverStyle: {'opacity': '0.8'},
+          opacity: 0.8,
+          size: '10px'
+        }
+      }
+    }
+  },
+  mounted () {
+    // console.log(this)
   }
 }
 </script>
@@ -61,12 +84,16 @@ a:hover, a:focus {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.swiper-page {
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+/*.swiper-page {
   height: 100%;
   position: relative;
   overflow-y: hidden;
   min-width: 1200px;
-}
+}*/
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -111,5 +138,8 @@ a:hover, a:focus {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.__rail-is-vertical {
+  z-index: 999!important;
 }
 </style>

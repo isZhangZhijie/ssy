@@ -59,7 +59,7 @@
         <span>你还在等什么</span>
         <p>想成为技能达人</p>
         <h2><span>扫描</span>随时约下载</h2>
-        <img src="@/assets/imgs/download_android2.png" alt="">
+        <img src="@/assets/imgs/download_android.png" alt="">
       </div>
     </div>
   </div>
@@ -69,12 +69,16 @@
 export default {
   name: 'recruit',
   data () {
-    return {}
+    return {
+    }
   },
   methods: {
     goDownload () {
-      // $(document).animate().scrollTop($(document).height() - $(window).height())
-      $('html, body').finish().animate({'scrollTop': $(document).height() - $(window).height()}, 400)
+      console.log(this.$root)
+      this.$root.$children[0].$refs['vs'].scrollTo({
+        x: 0,
+        y: '100%'
+      })
     }
   }
 }

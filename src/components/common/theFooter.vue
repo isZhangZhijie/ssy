@@ -19,14 +19,14 @@
         </li>
         <li class="download-item">
           <h2>Android下载</h2>
-          <p><img src="@/assets/imgs/download_android2.png" alt=""></p>
+          <p><img src="@/assets/imgs/download_android.png" alt=""></p>
         </li>
         <li class="download-item">
           <h2>IOS下载</h2>
-          <p><img src="@/assets/imgs/download_ios2.png" alt=""></p>
+          <p><img src="@/assets/imgs/download_ios.png" alt=""></p>
         </li>
       </ul>
-      <p class="copyright">©2015-2018 随时约 粤ICP备17153702号</p>
+      <p class="copyright">©2015-2018 随时约 <a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备17153702号</a></p>
     </div>
   </div>
 </template>
